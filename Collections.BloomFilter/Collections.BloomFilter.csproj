@@ -40,7 +40,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BloomFilter.cs" />
-    <Compile Include="Generic\BloomFilter.cs" />
+    <Compile Include="Generic\BloomFilter\HashFunctionGenerators\BaseHashFunctionGenerator.cs" />
+    <Compile Include="Generic\BloomFilter\HashFunctionGenerators\HashCode_HashFunctionGenerator.cs" />
+    <Compile Include="Generic\BloomFilter\HashFunctionGenerators\KeyedHashAlgorithm_HashFunctionGenerator.cs" />
+    <Compile Include="Generic\BloomFilter\IHashFunctionGenerator.cs" />
+    <Compile Include="Generic\BloomFilter\HashFunctionGenerators\HashAlgorithm_HashFunctionGenerator.cs" />
+    <Compile Include="Generic\BloomFilter`.cs" />
+    <Compile Include="Generic\IBloomFilter`.cs" />
+    <Compile Include="IBloomFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

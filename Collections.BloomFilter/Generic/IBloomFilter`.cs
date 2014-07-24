@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace System.Collections
+namespace System.Collections.Generic
 {
     /// <summary>
     /// A Bloom filter is a space-efficient probabilistic data structure that is used to test 
@@ -14,16 +14,11 @@ namespace System.Collections
     /// 
     /// See http://wikipedia.org/wiki/Bloom_filter for more information.
     /// </summary>
-    /// <remarks>
-    /// Convienence alias for <see cref="Generic.BloomFilter{object}"/>.
-    /// </remarks>
-    public class BloomFilter : Generic.BloomFilter<object>
+    /// <typeparam name="ElementT">Data type of elements</typeparam>
+    public interface IBloomFilter<ElementT> : IBloomFilter
     {
-        public BloomFilter(int bitCount, Func<object, IEnumerable<int>> hashFunctions)
-            : base(bitCount, hashFunctions)
-        {
+        void Add(ElementT item);
 
-        }
-
+        bool ProbablyContains(ElementT item);
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace System.Collections
 {
@@ -14,16 +13,10 @@ namespace System.Collections
     /// 
     /// See http://wikipedia.org/wiki/Bloom_filter for more information.
     /// </summary>
-    /// <remarks>
-    /// Convienence alias for <see cref="Generic.BloomFilter{object}"/>.
-    /// </remarks>
-    public class BloomFilter : Generic.BloomFilter<object>
+    public interface IBloomFilter
     {
-        public BloomFilter(int bitCount, Func<object, IEnumerable<int>> hashFunctions)
-            : base(bitCount, hashFunctions)
-        {
-
-        }
-
+        void Add(object item);
+        
+        bool ProbablyContains(object item);
     }
 }

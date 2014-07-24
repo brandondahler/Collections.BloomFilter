@@ -43,7 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BloomFilterTests.cs" />
-    <Compile Include="Generic\BloomFilterTests.cs" />
+    <Compile Include="Generic\BloomFilter\HashFunctionGenerators\HashCode_HashFunctionGeneratorTests.cs" />
+    <Compile Include="Generic\BloomFilter\IHashFunctionGeneratorTests.cs" />
+    <Compile Include="Generic\BloomFilter`Tests.cs" />
+    <Compile Include="Generic\BloomFilter\HashFunctionGenerators\HashAlgorithm_HashFunctionGeneratorTests.cs" />
+    <Compile Include="Generic\BloomFilter\HashFunctionGenerators\KeyedHashAlgorithm_HashFunctionGeneratorTests.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
